@@ -31,14 +31,14 @@ public class Empanadas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String provinciasemp ;
+        String provinciasemp="" ;
         int empSalteñasXdia ;
         int empTucumanasXdia;
         int empanadasTucumanas;
         int empanadasSalteñas;
         int numProvincia ;
         int cajaPromocion;
-       
+        MetodosPromos MP = new MetodosPromos();
     
         Scanner sc = new Scanner(System.in);
         
@@ -66,25 +66,7 @@ public class Empanadas {
         empTucumanasXdia=sc.nextInt();
         System.out.println("Tiene " + empSalteñasXdia+ " empanadas Salteñas");
         System.out.println("Tiene "+ empTucumanasXdia+" empanadas Tucumanas");
-        
-    
-        if (provinciasemp == "Salta") {
-            empanadasSalteñas=4;
-            int totalCajas= empSalteñasXdia/empanadasSalteñas;
-            System.out.println("Tiene un total de: "+ totalCajas + " cajas de promocion");
-        }else if (provinciasemp == "Tucuman"){
-            empanadasTucumanas=4;
-            int totalCajas= empTucumanasXdia/ empanadasTucumanas;
-            System.out.println("Tiene un total de: "+ totalCajas + " cajas de promocion");
-        }else if(provinciasemp=="Catamarca"|| provinciasemp=="Jujuy" && empSalteñasXdia>empTucumanasXdia){
-            int totalCajas= empTucumanasXdia/3;
-            System.out.println("Tiene un total de: "+ totalCajas + " cajas de promocion");
-        }else if(provinciasemp=="Catamarca"|| provinciasemp=="Jujuy" && empSalteñasXdia<empTucumanasXdia){
-            int totalCajas= empSalteñasXdia/3;
-            System.out.println("Tiene un total de: "+ totalCajas + " cajas de promocion");
-        
-        }
-        
+        System.out.println("Tiene : " +MP.promocional(provinciasemp, empSalteñasXdia, empTucumanasXdia)+" cajas de promocion");
         
     } 
     
