@@ -13,7 +13,21 @@ import java.util.Scanner;
  */
 public class Empanadas {
 
-    /**
+    /** La casa de empanadas necesita conocer la cant de cajas de promocion
+     * que puede ofrecer en un dia determinado a la cantidad de empanadas
+     * que puedan preparar ese dia.Las promociones son de 6 empanadas por caja y las
+     * proporciones de acuerdo a la provincia donde se encuentre el local, de acuerdo
+     * a los sig datos:
+     * 
+     *Provincia= Salta (empanadas Salteñas = 4 / empanadas Tucumanas = 2)
+     * Provincia= Tucuman(empanadas Salteñas= 2/ empanadas Tucumanas = 4)
+     * Provincia= Catamarca y Jujuy (empanadas Salteñas= 3/ empanadas Tucumanas = 3)
+     * 
+     * Codificar en Java Cuantas cajas de promocion puedo armar
+     * 
+     */
+    
+     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
